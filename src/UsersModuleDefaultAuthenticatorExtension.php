@@ -1,6 +1,7 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator;
 
 use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
+use Anomaly\Streams\Addon\Module\Users\Authentication\Contract\AuthenticatorInterface;
 
 /**
  * Class UsersModuleDefaultAuthenticatorExtension
@@ -12,16 +13,16 @@ use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class UsersModuleDefaultAuthenticatorExtension extends ExtensionAddon
+class UsersModuleDefaultAuthenticatorExtension extends ExtensionAddon implements AuthenticatorInterface
 {
 
     /**
      * Authenticate the credentials.
      *
-     * @param $credentials
+     * @param array $credentials
      * @return mixed
      */
-    public function authenticate($credentials)
+    public function authenticate(array $credentials)
     {
         $repository = app('Anomaly\Streams\Addon\Module\Users\User\Contract\UserRepositoryInterface');
 
