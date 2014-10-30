@@ -1,7 +1,7 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator;
 
+use Anomaly\Streams\Addon\Module\Users\Extension\AuthenticatorInterface;
 use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
-use Anomaly\Streams\Addon\Module\Users\Authentication\Contract\AuthenticatorInterface;
 
 /**
  * Class UsersModuleDefaultAuthenticatorExtension
@@ -28,6 +28,5 @@ class UsersModuleDefaultAuthenticatorExtension extends ExtensionAddon implements
 
         return $repository->findByLoginAndPassword($credentials['login'], $credentials['password']);
     }
-
 }
  
