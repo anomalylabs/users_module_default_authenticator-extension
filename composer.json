@@ -1,0 +1,17 @@
+{
+    "name": "anomaly/users_module_default_authenticator-extension",
+    "type": "streams-addon",
+    "description": "The default authenticator for the Users module.",
+    "authors": [
+        {
+            "name": "AnomalyLabs",
+            "email": "hello@anomaly.is"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
