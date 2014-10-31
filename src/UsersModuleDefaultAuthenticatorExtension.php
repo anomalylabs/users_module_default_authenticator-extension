@@ -26,13 +26,7 @@ class UsersModuleDefaultAuthenticatorExtension extends ExtensionAddon implements
     {
         $repository = app('Anomaly\Streams\Addon\Module\Users\User\Contract\UserRepositoryInterface');
 
-        if (setting('module.users::login_with', 'email')) {
-
-            return $repository->findByEmailAndPassword($credentials['login'], $credentials['password']);
-        } else {
-
-            return $repository->findByUsernameAndPassword($credentials['login'], $credentials['password']);
-        }
+        return $repository->findUserByLoginAndPassword($credentials['login'], $credentials['password']);
     }
 }
  
