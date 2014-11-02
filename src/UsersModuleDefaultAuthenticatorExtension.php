@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator;
 
-use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
+use Anomaly\Streams\Addon\Module\Users\Extension\AuthenticatorExtension;
 
 /**
  * Class UsersModuleDefaultAuthenticatorExtension
@@ -13,17 +13,8 @@ use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class UsersModuleDefaultAuthenticatorExtension extends ExtensionAddon
+class UsersModuleDefaultAuthenticatorExtension extends AuthenticatorExtension
 {
 
-    /**
-     * Return the handler class.
-     *
-     * @return null|string
-     */
-    public function toHandler()
-    {
-        return $this->transform(__FUNCTION__);
-    }
 }
  
