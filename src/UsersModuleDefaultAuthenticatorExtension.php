@@ -1,8 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator;
 
 use Anomaly\Streams\Addon\Module\Users\Extension\AuthenticatorExtension;
-use Anomaly\Streams\Addon\Module\Users\User\UserModel;
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class UsersModuleDefaultAuthenticatorExtension
@@ -15,7 +13,7 @@ use Anomaly\Streams\Platform\Addon\Extension\Extension;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class UsersModuleDefaultAuthenticatorExtension extends Extension /*extends AuthenticatorExtension*/
+class UsersModuleDefaultAuthenticatorExtension extends AuthenticatorExtension
 {
 
     /**
@@ -26,9 +24,9 @@ class UsersModuleDefaultAuthenticatorExtension extends Extension /*extends Authe
      */
     public function authenticate(array $credentials)
     {
-        $user = new UserModel();
+        $user = app('Anomaly\Streams\Addon\Module\Users\User\Contract\UserRepositoryInterface');
 
-        return $user->findByLoginAndPassword($credentials['login'], $credentials['password']);
+        return $user->findByCredentials($credentials);
     }
 }
  
