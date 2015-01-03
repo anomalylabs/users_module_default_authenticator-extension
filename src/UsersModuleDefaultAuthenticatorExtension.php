@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator;
+<?php namespace Anomaly\UsersModuleDefaultAuthenticatorExtension;
 
 use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
