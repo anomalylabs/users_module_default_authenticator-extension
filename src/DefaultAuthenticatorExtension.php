@@ -2,6 +2,7 @@
 
 use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
 use Anomaly\Streams\Platform\Addon\Extension\Extension;
+use Anomaly\UsersModule\User\Contract\UserInterface;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 
 /**
@@ -29,14 +30,13 @@ class DefaultAuthenticatorExtension extends Extension
     protected $provides = 'anomaly.module.users::authenticator.default';
 
     /**
-     * Authenticate a set of credentials.
+     * Authenticate credentials.
      *
      * @param array $credentials
-     * @return mixed
+     * @return null|UserInterface
      */
     public function authenticate(array $credentials)
     {
         return $this->dispatch(new FindUserByCredentials($credentials));
     }
 }
- 

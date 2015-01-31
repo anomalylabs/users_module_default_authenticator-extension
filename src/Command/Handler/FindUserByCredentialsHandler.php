@@ -1,6 +1,7 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension\Command\Handler;
 
 use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
+use Anomaly\UsersModule\User\Contract\UserInterface;
 use Anomaly\UsersModule\User\Contract\UserRepositoryInterface;
 
 /**
@@ -35,6 +36,7 @@ class FindUserByCredentialsHandler
      * Handle the command.
      *
      * @param FindUserByCredentials $command
+     * @return null|UserInterface
      */
     public function handle(FindUserByCredentials $command)
     {
