@@ -1,4 +1,3 @@
-users_module_default_authenticator-extension
-============================================
+# Default Authenticator
 
-This is the default authenticator extension for the Users module.
+The default authenticator extension for the Users module.
