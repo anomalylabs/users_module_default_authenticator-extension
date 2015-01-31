@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/users_module_default_authenticator-extension",
+    "name": "anomaly/default_authenticator-extension",
     "type": "streams-addon",
     "description": "The default authenticator for the Users module.",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Anomaly\\UsersModuleDefaultAuthenticatorExtension\\": "src/"
+            "Anomaly\\DefaultAuthenticatorExtension\\": "src/"
         }
     },
     "extra": {
