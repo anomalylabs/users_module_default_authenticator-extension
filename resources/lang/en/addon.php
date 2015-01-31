@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Default Authenticator',
-    'description' => 'An extension that authenticates login requests against user accounts.',
+    'description' => 'The default authenticator for the Users module.',
 ];
