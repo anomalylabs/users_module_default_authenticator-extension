@@ -1,8 +1,8 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension;
 
 use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
 use Anomaly\UsersModule\User\Contract\UserInterface;
+use Anomaly\UsersModule\User\UserAuthenticator;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 
 /**
@@ -16,7 +16,7 @@ use Illuminate\Foundation\Bus\DispatchesCommands;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class DefaultAuthenticatorExtension extends Extension
+class DefaultAuthenticatorExtension extends UserAuthenticator
 {
 
     use DispatchesCommands;
