@@ -2,7 +2,7 @@
 
 use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
 use Anomaly\UsersModule\Authenticator\AuthenticatorExtension;
-use Anomaly\UsersModule\User\Contract\UserInterface;
+use Anomaly\UsersModule\User\Contract\User;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 
 /**
@@ -33,7 +33,7 @@ class DefaultAuthenticatorExtension extends AuthenticatorExtension
      * Authenticate credentials.
      *
      * @param array $credentials
-     * @return null|UserInterface
+     * @return null|User
      */
     public function authenticate(array $credentials)
     {
