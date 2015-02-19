@@ -1,8 +1,8 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension\Command\Handler;
 
 use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
-use Anomaly\UsersModule\User\Contract\User;
-use Anomaly\UsersModule\User\Contract\UserRepository;
+use Anomaly\UsersModule\User\Contract\UserInterface;
+use Anomaly\UsersModule\User\Contract\UserRepositoryInterface;
 
 /**
  * Class FindUserByCredentialsHandler
@@ -18,16 +18,16 @@ class FindUserByCredentialsHandler
     /**
      * The user repository.
      *
-     * @var UserRepository
+     * @var UserRepositoryInterface
      */
     protected $users;
 
     /**
      * Create a new FindUserByCredentialsHandler instance.
      *
-     * @param UserRepository $users
+     * @param UserRepositoryInterface $users
      */
-    public function __construct(UserRepository $users)
+    public function __construct(UserRepositoryInterface $users)
     {
         $this->users = $users;
     }
@@ -36,7 +36,7 @@ class FindUserByCredentialsHandler
      * Handle the command.
      *
      * @param FindUserByCredentials $command
-     * @return null|User
+     * @return null|UserInterface
      */
     public function handle(FindUserByCredentials $command)
     {
