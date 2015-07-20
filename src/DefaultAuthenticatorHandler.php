@@ -1,18 +1,17 @@
-<?php namespace Anomaly\DefaultAuthenticatorExtension\Command\Handler;
+<?php namespace Anomaly\DefaultAuthenticatorExtension;
 
-use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
 use Anomaly\UsersModule\User\Contract\UserInterface;
 use Anomaly\UsersModule\User\Contract\UserRepositoryInterface;
 
 /**
- * Class FindUserByCredentialsHandler
+ * Class DefaultAuthenticatorHandler
  *
  * @link          http://anomaly.is/streams-platform
  * @author        AnomalyLabs, Inc. <hello@anomaly.is>
  * @author        Ryan Thompson <ryan@anomaly.is>
- * @package       Anomaly\DefaultAuthenticatorExtension\Command\Handler
+ * @package       Anomaly\DefaultAuthenticatorExtension
  */
-class FindUserByCredentialsHandler
+class DefaultAuthenticatorHandler
 {
 
     /**
@@ -23,7 +22,7 @@ class FindUserByCredentialsHandler
     protected $users;
 
     /**
-     * Create a new FindUserByCredentialsHandler instance.
+     * Create a new DefaultAuthenticatorHandler instance.
      *
      * @param UserRepositoryInterface $users
      */
@@ -33,13 +32,13 @@ class FindUserByCredentialsHandler
     }
 
     /**
-     * Handle the command.
+     * Handle the authentication.
      *
-     * @param FindUserByCredentials $command
+     * @param array $credentials
      * @return null|UserInterface
      */
-    public function handle(FindUserByCredentials $command)
+    public function authenticate(array $credentials)
     {
-        return $this->users->findByCredentials($command->getCredentials());
+        return $this->users->findByCredentials($credentials);
     }
 }

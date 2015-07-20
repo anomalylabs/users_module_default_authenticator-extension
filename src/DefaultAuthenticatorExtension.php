@@ -1,9 +1,6 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension;
 
-use Anomaly\DefaultAuthenticatorExtension\Command\FindUserByCredentials;
 use Anomaly\UsersModule\Authenticator\AuthenticatorExtension;
-use Anomaly\UsersModule\User\Contract\UserInterface;
-use Illuminate\Foundation\Bus\DispatchesCommands;
 
 /**
  * Class DefaultAuthenticatorExtension
@@ -19,8 +16,6 @@ use Illuminate\Foundation\Bus\DispatchesCommands;
 class DefaultAuthenticatorExtension extends AuthenticatorExtension
 {
 
-    use DispatchesCommands;
-
     /**
      * This extensions provides the default
      * authenticator for the users module.
@@ -29,14 +24,4 @@ class DefaultAuthenticatorExtension extends AuthenticatorExtension
      */
     protected $provides = 'anomaly.module.users::authenticator.default';
 
-    /**
-     * Authenticate credentials.
-     *
-     * @param array $credentials
-     * @return null|UserInterface
-     */
-    public function authenticate(array $credentials)
-    {
-        return $this->dispatch(new FindUserByCredentials($credentials));
-    }
 }
