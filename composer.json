@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Anomaly\\DefaultAuthenticatorCheckExtension\\": "src/"
+            "Anomaly\\DefaultAuthenticatorExtension\\": "src/"
         }
     },
     "extra": {
