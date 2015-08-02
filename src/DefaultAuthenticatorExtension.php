@@ -1,6 +1,6 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension;
 
-use Anomaly\UsersModule\Authenticator\AuthenticatorExtension;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class DefaultAuthenticatorExtension
@@ -13,7 +13,7 @@ use Anomaly\UsersModule\Authenticator\AuthenticatorExtension;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class DefaultAuthenticatorExtension extends AuthenticatorExtension
+class DefaultAuthenticatorExtension extends Extension
 {
 
     /**
