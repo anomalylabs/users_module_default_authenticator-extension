@@ -1,6 +1,8 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension;
 
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
+use Anomaly\DefaultAuthenticatorExtension\Command\AuthenticateCredentials;
+use Anomaly\UsersModule\User\Authenticator\AuthenticatorExtension;
+use Anomaly\UsersModule\User\Contract\UserInterface;
 
 /**
  * Class DefaultAuthenticatorExtension
@@ -13,7 +15,7 @@ use Anomaly\Streams\Platform\Addon\Extension\Extension;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleDefaultAuthenticator
  */
-class DefaultAuthenticatorExtension extends Extension
+class DefaultAuthenticatorExtension extends AuthenticatorExtension
 {
 
     /**
@@ -24,4 +26,14 @@ class DefaultAuthenticatorExtension extends Extension
      */
     protected $provides = 'anomaly.module.users::authenticator.default';
 
+    /**
+     * Authenticate a set of credentials.
+     *
+     * @param array $credentials
+     * @return null|UserInterface
+     */
+    public function authenticate(array $credentials)
+    {
+        return $this->dispatch(new AuthenticateCredentials($credentials));
+    }
 }
