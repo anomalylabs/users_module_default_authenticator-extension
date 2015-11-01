@@ -1,7 +1,7 @@
 {
     "name": "anomaly/default_authenticator-extension",
     "type": "streams-addon",
-    "description": "The default authenticator for the Users module.",
+    "description": "The default user authenticator for the Users module.",
     "keywords": [
         "streams extension",
         "streams addon",
@@ -27,7 +27,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-1.0/master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         }
     }
 }
