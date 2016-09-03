@@ -1,17 +1,8 @@
 <?php namespace Anomaly\DefaultAuthenticatorExtension\Command;
 
 use Anomaly\UsersModule\User\Contract\UserRepositoryInterface;
-use Illuminate\Contracts\Bus\SelfHandling;
 
-/**
- * Class AuthenticateCredentials
- *
- * @link          http://pyrocms.com/
- * @author        PyroCMS, Inc. <support@pyrocms.com>
- * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\DefaultAuthenticatorExtension\Command
- */
-class AuthenticateCredentials implements SelfHandling
+class AuthenticateCredentials
 {
 
     /**
@@ -34,7 +25,7 @@ class AuthenticateCredentials implements SelfHandling
     /**
      * Handle the command.
      *
-     * @param UserRepositoryInterface $users
+     * @param  UserRepositoryInterface                               $users
      * @return \Anomaly\UsersModule\User\Contract\UserInterface|null
      */
     public function handle(UserRepositoryInterface $users)
