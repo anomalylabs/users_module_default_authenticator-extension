@@ -25,7 +25,7 @@ class AuthenticateCredentials
     /**
      * Handle the command.
      *
-     * @param  UserRepositoryInterface                               $users
+     * @param  UserRepositoryInterface $users
      * @return \Anomaly\UsersModule\User\Contract\UserInterface|null
      */
     public function handle(UserRepositoryInterface $users)
