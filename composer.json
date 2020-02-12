@@ -31,6 +31,9 @@
             "providers": [
                 "Anomaly\\DefaultAuthenticatorExtension\\DefaultAuthenticatorExtensionServiceProvider"
             ]
+        },
+        "streams": {
+            "provides": "anomaly.module.users::authenticator.default"
         }
     }
 }

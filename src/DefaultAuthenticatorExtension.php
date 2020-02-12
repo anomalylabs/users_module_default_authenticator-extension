@@ -21,14 +21,6 @@ class DefaultAuthenticatorExtension extends AuthenticatorExtension
 {
 
     /**
-     * This extensions provides the default
-     * authenticator for the users module.
-     *
-     * @var string
-     */
-    protected $provides = 'anomaly.module.users::authenticator.default';
-
-    /**
      * Authenticate a set of credentials.
      *
      * @param array $credentials
