@@ -1,4 +1,6 @@
-<?php namespace Anomaly\DefaultAuthenticatorExtension;
+<?php
+
+namespace Anomaly\DefaultAuthenticatorExtension;
 
 use Anomaly\DefaultAuthenticatorExtension\Command\AuthenticateCredentials;
 use Anomaly\UsersModule\User\Authenticator\AuthenticatorExtension;
